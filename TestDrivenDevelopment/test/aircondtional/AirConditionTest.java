@@ -40,8 +40,28 @@ public class AirConditionTest {
     @Test
     public void testThatTemperatureIsIncreased() {
         AirCondition airCondition = new AirCondition();
-        airCondition.airCondiionTemperature(4);
+        airCondition.airConditionTemperature(20);
         double feedback = airCondition.getTemperature();
         assertEquals(20, feedback);
+    }
+
+    @Test
+    public void testThatTemperatureIsDecreased() {
+        AirCondition airCondition = new AirCondition();
+        airCondition.airConditionTemperature(18);
+        assertEquals(18,airCondition.getTemperature());
+    }
+
+    @Test
+    public void testingThatAirConditionTempIsThirtyForTempAboveThirty() {
+        AirCondition airCondition = new AirCondition();
+        airCondition.airConditionTemperature(40);
+        assertEquals(30, airCondition.getTemperature());
+    }
+    @Test
+    public void testingThatAirConditionTempIsSixteenForTempBelowThirty() {
+        AirCondition airCondition = new AirCondition();
+        airCondition.airConditionTemperature(15);
+        assertEquals(16, airCondition.getTemperature());
     }
 }

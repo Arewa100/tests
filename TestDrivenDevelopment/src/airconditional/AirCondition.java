@@ -27,11 +27,20 @@ public class AirCondition {
         }
     }
 
-    public void airCondiionTemperature(double temperature) {
-        this.temperature += temperature;
+    public void airConditionTemperature(double temperature) {
+        if (temperatureIsInRange(temperature)) {
+            this.temperature = temperature;
+        }else if(temperature > 30 && !temperatureIsInRange(temperature)) {
+            this.temperature = 30;
+        }
     }
 
     public double getTemperature() {
         return temperature;
+    }
+    private boolean temperatureIsInRange(double temperature) {
+        boolean temperatureIsLessThanThirtyAndGreaterThanSixteen = (temperature <= 30 && temperature >= 16);
+        return (temperatureIsLessThanThirtyAndGreaterThanSixteen) ?  true : false;
+
     }
 }
