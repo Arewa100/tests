@@ -40,7 +40,7 @@ public class AirCondition {
     }
     private boolean temperatureIsInRange(double temperature) {
         boolean temperatureIsLessThanThirtyAndGreaterThanSixteen = (temperature <= 30 && temperature >= 16);
-        return (temperatureIsLessThanThirtyAndGreaterThanSixteen) ?  true : false;
+        return temperatureIsLessThanThirtyAndGreaterThanSixteen ?  true : false;
 
     }
 }

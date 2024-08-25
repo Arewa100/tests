@@ -53,13 +53,13 @@ public class AirConditionTest {
     }
 
     @Test
-    public void testingThatAirConditionTempIsThirtyForTempAboveThirty() {
+    public void testingThatAirConditionTempRemainsThirtyForTempAboveThirty() {
         AirCondition airCondition = new AirCondition();
         airCondition.airConditionTemperature(40);
         assertEquals(30, airCondition.getTemperature());
     }
     @Test
-    public void testingThatAirConditionTempIsSixteenForTempBelowThirty() {
+    public void testingThatAirConditionTempRemainsSixteenForTempBelowThirty() {
         AirCondition airCondition = new AirCondition();
         airCondition.airConditionTemperature(15);
         assertEquals(16, airCondition.getTemperature());
